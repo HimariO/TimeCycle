@@ -3,10 +3,10 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
-from geotnf.point_tnf import PointTnf
+from TimeCycle.geotnf.point_tnf import PointTnf
 from scipy.ndimage.morphology import binary_dilation,generate_binary_structure
-from utils.torch_util import expand_dim
-from geotnf.transformation import GeometricTnf,GeometricTnfAffine
+from TimeCycle.utils.torch_util import expand_dim
+from TimeCycle.geotnf.transformation import GeometricTnf,GeometricTnfAffine
 import torch.nn.functional as F
 import scipy.signal
 

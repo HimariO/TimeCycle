@@ -2,7 +2,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from torch.autograd import Variable
-from geotnf.point_tnf import normalize_axis, unnormalize_axis
+from TimeCycle.geotnf.point_tnf import normalize_axis, unnormalize_axis
 
 def read_flo_file(filename,verbose=False):
     """

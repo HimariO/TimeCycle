@@ -10,13 +10,13 @@ import torch
 import torch.utils.data as data
 import random
 
-from utils.imutils2 import *
-from utils.transforms import *
+from TimeCycle.utils.imutils2 import *
+from TimeCycle.utils.transforms import *
 import torchvision.transforms as transforms
 
 import scipy.io as sio
 import scipy.misc
-from geotnf.transformation import GeometricTnf
+from TimeCycle.geotnf.transformation import GeometricTnf
 
 import torchvision.transforms as transforms
 

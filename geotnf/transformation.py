@@ -9,7 +9,7 @@ from torch.nn.modules.module import Module
 from torch.utils.data import Dataset
 from torch.autograd import Variable
 import torch.nn.functional as F
-from utils.torch_util import expand_dim
+from TimeCycle.utils.torch_util import expand_dim
 
 class GeometricTnf(object):
     """

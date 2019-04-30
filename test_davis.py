@@ -24,12 +24,12 @@ import torch.optim as optim
 import torch.utils.data as data
 import torchvision.transforms as transforms
 
-import models.videos.model_test as video3d
+import TimeCycle.models.videos.model_test as video3d
 
-from utils import Logger, AverageMeter, mkdir_p, savefig
-import models.dataset.davis_test as davis
+from TimeCycle.utils import Logger, AverageMeter, mkdir_p, savefig
+import TimeCycle.models.dataset.davis_test as davis
 
-from geotnf.transformation import GeometricTnf
+from TimeCycle.geotnf.transformation import GeometricTnf
 
 from scipy.ndimage.morphology import binary_dilation,generate_binary_structure
 import torch.nn.functional as F

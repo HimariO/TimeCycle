@@ -40,11 +40,11 @@ import torch.utils.data as data
 import torchvision.transforms as transforms
 import torch.nn.functional as F
 
-import utils.imutils2
-import models.videos.model_simple as models
-from utils import Logger, AverageMeter, mkdir_p, savefig
+import TimeCycle.utils.imutils2
+import TimeCycle.models.videos.model_simple as models
+from TimeCycle.utils import Logger, AverageMeter, mkdir_p, savefig
 
-import models.dataset.vlog_train as vlog
+import TimeCycle.models.dataset.vlog_train as vlog
 
 params = {}
 params['filelist'] = '/nfs.yoda/xiaolonw/vlog/vlog_frames_12fps.txt'

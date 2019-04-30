@@ -1,7 +1,7 @@
 import torch
 from torch.autograd import Variable
 import numpy as np
-from geotnf.transformation import TpsGridGen
+from TimeCycle.geotnf.transformation import TpsGridGen
 
 def normalize_axis(x,L):
     return (x-1-(L-1)/2)*2/(L-1)

@@ -5,8 +5,8 @@ from torch.autograd import Variable
 import torchvision.models as models
 import numpy as np
 import numpy.matlib
-# from utils.torch_util import Softmax1D
-from geotnf.transformation import GeometricTnf
+# from TimeCycle.utils.torch_util import Softmax1D
+from TimeCycle.geotnf.transformation import GeometricTnf
 
 def featureL2Norm(feature):
     epsilon = 1e-6
