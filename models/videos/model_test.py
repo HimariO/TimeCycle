@@ -1,28 +1,24 @@
 # from __future__ import absolute_import
 
-import torch
-import torch.nn as nn
-from torch.autograd import Variable
-# from correlation_package.modules.corr import Correlation
-import math
-import copy
-import numpy as np
-from . import resnet_res4s1
-from . import inflated_resnet
-# import i3res_res3
-import torchvision
-
-import torch.nn.functional as F
-from TimeCycle.geotnf.transformation import GeometricTnf,GeometricTnfAffine
-from TimeCycle.geotnf.loss import TransformedGridLoss, WeakInlierCountPool
-from TimeCycle.utils.torch_util import expand_dim
-
-import random
-import TimeCycle.utils.imutils2
-
-
 import time
 import sys
+import random
+import math
+import copy
+
+import numpy as np
+import torch
+import torch.nn as nn
+import torchvision
+import torch.nn.functional as F
+from torch.autograd import Variable
+
+from . import resnet_res4s1
+from . import inflated_resnet
+from ...geotnf.transformation import GeometricTnf,GeometricTnfAffine
+from ...geotnf.loss import TransformedGridLoss, WeakInlierCountPool
+from ...utils.torch_util import expand_dim
+
 
 class CycleTime(nn.Module):
 

@@ -9,13 +9,13 @@ import os
 import shutil
 import time
 import random
+import pickle
+
 import cv2
 import imageio
-
 import numpy as np
-import pickle
 import scipy.misc
-
+from scipy.ndimage.morphology import binary_dilation,generate_binary_structure
 import torch
 import torch.nn as nn
 import torch.nn.parallel
@@ -23,17 +23,13 @@ import torch.backends.cudnn as cudnn
 import torch.optim as optim
 import torch.utils.data as data
 import torchvision.transforms as transforms
-
-import TimeCycle.models.videos.model_test as video3d
-
-from TimeCycle.utils import Logger, AverageMeter, mkdir_p, savefig
-import TimeCycle.models.dataset.davis_test as davis
-
-from TimeCycle.geotnf.transformation import GeometricTnf
-
-from scipy.ndimage.morphology import binary_dilation,generate_binary_structure
 import torch.nn.functional as F
 from torch.autograd import Variable
+
+from .models.videos import model_test as video3d
+from .utils import Logger, AverageMeter, mkdir_p, savefig
+from .models.dataset import davis_test as davis
+from .geotnf.transformation import GeometricTnf
 
 
 params = {}

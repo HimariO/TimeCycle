@@ -1,14 +1,16 @@
 from __future__ import print_function, division
+
 import numpy as np
 import torch
 import torch.nn as nn
-from torch.autograd import Variable
-from TimeCycle.geotnf.point_tnf import PointTnf
-from scipy.ndimage.morphology import binary_dilation,generate_binary_structure
-from TimeCycle.utils.torch_util import expand_dim
-from TimeCycle.geotnf.transformation import GeometricTnf,GeometricTnfAffine
 import torch.nn.functional as F
 import scipy.signal
+from scipy.ndimage.morphology import binary_dilation,generate_binary_structure
+from torch.autograd import Variable
+
+from ..utils.torch_util import expand_dim
+from .point_tnf import PointTnf
+from .transformation import GeometricTnf,GeometricTnfAffine
 
 class TransformedGridLoss(nn.Module):
     def __init__(self, geometric_model='affine', use_cuda=True, grid_size=20):

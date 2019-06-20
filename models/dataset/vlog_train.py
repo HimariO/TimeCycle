@@ -8,17 +8,14 @@ import math
 
 import torch
 import torch.utils.data as data
-import random
-
-from TimeCycle.utils.imutils2 import *
-from TimeCycle.utils.transforms import *
 import torchvision.transforms as transforms
-
 import scipy.io as sio
 import scipy.misc
-from TimeCycle.geotnf.transformation import GeometricTnf
 
-import torchvision.transforms as transforms
+from ...utils.imutils2 import *
+from ...utils.transforms import *
+from ...geotnf.transformation import GeometricTnf
+
 
 class VlogSet(data.Dataset):
     def __init__(self, params, is_train=True, frame_gap=1, augment=['crop', 'flip', 'frame_gap']):
